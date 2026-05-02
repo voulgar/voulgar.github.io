@@ -1,1 +1,86 @@
-
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>maiLVoul — Почта Voul</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background-color: #050505;
+            color: #c084fc;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 16px;
+            gap: 24px;
+        }
+        .back-link {
+            color: #8b5cf6;
+            text-decoration: none;
+            font-size: 14px;
+            border: 1px solid #8b5cf6;
+            padding: 8px 16px;
+            border-radius: 8px;
+            transition: all 0.3s;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+        .back-link:hover { background: #8b5cf6; color: #fff; box-shadow: 0 0 15px #8b5cf6; }
+        .icon { font-size: 60px; animation: float 3s infinite ease-in-out; }
+        .logo {
+            font-size: clamp(36px, 8vw, 60px);
+            font-weight: bold;
+            text-shadow: 0 0 25px #8b5cf6, 0 0 50px #6d28d9;
+            animation: pulse 3s infinite ease-in-out;
+            letter-spacing: 3px;
+        }
+        .status {
+            color: #6b7280;
+            font-size: clamp(14px, 3vw, 18px);
+            text-align: center;
+        }
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            max-width: 500px;
+        }
+        .feature-tag {
+            padding: 8px 16px;
+            background: #111;
+            border: 1px solid #8b5cf6;
+            border-radius: 20px;
+            color: #a78bfa;
+            font-size: 13px;
+        }
+        @keyframes pulse {
+            0%, 100% { text-shadow: 0 0 25px #8b5cf6, 0 0 50px #6d28d9; }
+            50% { text-shadow: 0 0 40px #a78bfa, 0 0 80px #8b5cf6; }
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-link">← Назад в Voul</a>
+    <div class="icon">📧</div>
+    <div class="logo">maiLVoul</div>
+    <p class="status">Почта экосистемы Voul — в разработке</p>
+    <div class="features">
+        <span class="feature-tag">Voul ID</span>
+        <span class="feature-tag">Входящие</span>
+        <span class="feature-tag">Отправленные</span>
+        <span class="feature-tag">Аватарки</span>
+        <span class="feature-tag">Маскот 🦊</span>
+    </div>
+    <p style="color: #4a4a5a; font-size: 13px;">Регистрация Voul ID через maiLVoul</p>
+</body>
+</html>
