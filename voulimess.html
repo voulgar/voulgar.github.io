@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>VoulGsearch — Поиск нового поколения</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #0a0a0a;
+            color: #c084fc;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 16px;
+            gap: 20px;
+        }
+        .back-link {
+            color: #8b5cf6;
+            text-decoration: none;
+            font-size: 14px;
+            border: 1px solid #8b5cf6;
+            padding: 8px 16px;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+        .back-link:hover {
+            background: #8b5cf6;
+            color: #fff;
+            box-shadow: 0 0 15px #8b5cf6;
+        }
+        .logo {
+            font-size: clamp(36px, 8vw, 60px);
+            font-weight: bold;
+            text-shadow: 0 0 20px #8b5cf6;
+            animation: pulse 3s infinite ease-in-out;
+        }
+        .status {
+            color: #6b7280;
+            font-size: clamp(14px, 3vw, 18px);
+        }
+        @keyframes pulse {
+            0%, 100% { text-shadow: 0 0 20px #8b5cf6; }
+            50% { text-shadow: 0 0 35px #a78bfa; }
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">VoulGsearch</div>
+    <p class="status">🔍 Поисковик будущего — в разработке</p>
+    <a href="index.html" class="back-link">← Назад в Voul</a>
+</body>
+</html>
