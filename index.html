@@ -2,40 +2,82 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Voul — Экосистема будущего</title>
     <style>
-        /* Здесь будут наши стили: чёрный и фиолетовый */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            background-color: #0a0a0a; /* Почти чёрный фон */
-            color: #c084fc; /* Нежно-фиолетовый текст */
-            font-family: Arial, sans-serif;
+            background-color: #0a0a0a;
+            color: #c084fc;
+            font-family: 'Segoe UI', Arial, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
+            min-height: 100vh;
+            padding: 16px;
+        }
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .logo {
+            font-size: clamp(40px, 10vw, 70px);
+            font-weight: bold;
+            letter-spacing: 6px;
+            text-shadow: 0 0 25px #8b5cf6, 0 0 50px #6d28d9;
+            animation: pulse 3s infinite ease-in-out;
+        }
+
+        .subtitle {
+            font-size: clamp(16px, 4vw, 24px);
+            color: #c4b5fd;
             text-align: center;
         }
-        .logo {
-            font-size: 60px;
-            font-weight: bold;
-            letter-spacing: 5px;
-            text-shadow: 0 0 20px #8b5cf6; /* Фиолетовое свечение */
-        }
-        .subtitle {
-            font-size: 20px;
+
+        .services {
+            font-size: clamp(14px, 3.5vw, 18px);
             color: #a78bfa;
-            margin-top: 10px;
+            margin-top: 20px;
+            text-align: center;
+            line-height: 1.6;
+            word-break: break-word;
+        }
+
+        .coming-soon {
+            color: #6b7280;
+            margin-top: 30px;
+            font-size: clamp(12px, 3vw, 16px);
+            text-align: center;
+        }
+
+        /* Лёгкая анимация свечения */
+        @keyframes pulse {
+            0%, 100% {
+                text-shadow: 0 0 25px #8b5cf6, 0 0 50px #6d28d9;
+            }
+            50% {
+                text-shadow: 0 0 40px #a78bfa, 0 0 80px #8b5cf6;
+            }
         }
     </style>
 </head>
 <body>
-    <div>
+    <div class="card">
         <div class="logo">VOUL</div>
         <div class="subtitle">Экосистема в чёрно-фиолетовых тонах</div>
-        <p style="color: grey; margin-top: 30px;">VoulMes • VouLImess • VoulGsearch</p>
-        <p style="color: #4a4a4a;">скоро здесь будет экосистема Voul...</p>
+        <div class="services">VoulMes • VouLImess • VoulGsearch</div>
+        <p class="coming-soon">Скоро здесь будет экосистема Voul...</p>
     </div>
 </body>
 </html>
