@@ -10,7 +10,6 @@
             padding: 0;
             box-sizing: border-box;
         }
-
         body {
             background-color: #0a0a0a;
             color: #c084fc;
@@ -21,9 +20,8 @@
             justify-content: center;
             min-height: 100vh;
             padding: 16px;
-            gap: 30px;
+            gap: 24px;
         }
-
         .back-link {
             color: #8b5cf6;
             text-decoration: none;
@@ -32,129 +30,42 @@
             padding: 8px 16px;
             border-radius: 8px;
             transition: all 0.3s;
-            position: absolute;
-            top: 20px;
-            left: 20px;
         }
-
         .back-link:hover {
             background: #8b5cf6;
             color: #fff;
             box-shadow: 0 0 15px #8b5cf6;
         }
-
         .logo {
-            font-size: clamp(36px, 10vw, 70px);
+            font-size: clamp(36px, 8vw, 60px);
             font-weight: bold;
             text-shadow: 0 0 25px #8b5cf6, 0 0 50px #6d28d9;
             animation: pulse 3s infinite ease-in-out;
             letter-spacing: 3px;
         }
-
-        .search-box {
-            display: flex;
-            gap: 10px;
-            width: 100%;
-            max-width: 550px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .search-input {
-            flex: 1;
-            min-width: 200px;
-            padding: 14px 18px;
-            border: 2px solid #8b5cf6;
-            border-radius: 30px;
-            background: #1a1a1a;
-            color: #e9d5ff;
-            font-size: 16px;
-            outline: none;
-            transition: all 0.3s;
-        }
-
-        .search-input::placeholder {
+        .status {
             color: #6b7280;
-        }
-
-        .search-input:focus {
-            border-color: #a78bfa;
-            box-shadow: 0 0 20px #8b5cf6, 0 0 40px #6d28d9;
-        }
-
-        .search-button {
-            padding: 14px 24px;
-            background: #8b5cf6;
-            border: none;
-            border-radius: 30px;
-            color: #fff;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s;
-            box-shadow: 0 0 10px #6d28d9;
-        }
-
-        .search-button:hover {
-            background: #a78bfa;
-            box-shadow: 0 0 25px #8b5cf6, 0 0 50px #6d28d9;
-            transform: scale(1.05);
-        }
-
-        .hint {
-            color: #6b7280;
-            font-size: 14px;
+            font-size: clamp(14px, 3vw, 18px);
             text-align: center;
         }
-
+        .icon {
+            font-size: 50px;
+            animation: float 3s infinite ease-in-out;
+        }
         @keyframes pulse {
             0%, 100% { text-shadow: 0 0 25px #8b5cf6, 0 0 50px #6d28d9; }
             50% { text-shadow: 0 0 40px #a78bfa, 0 0 80px #8b5cf6; }
         }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
     </style>
 </head>
 <body>
-    <a href="index.html" class="back-link">← Назад в Voul</a>
-
+    <div class="icon">🔍</div>
     <div class="logo">VoulGsearch</div>
-
-    <div class="search-box">
-        <input type="text" class="search-input" id="searchInput" placeholder="Введите запрос..." autofocus>
-        <button class="search-button" id="searchButton">Поиск</button>
-    </div>
-
-    <p class="hint">Нажмите Enter или кнопку "Поиск"</p>
-
-    <script>
-        // Получаем доступ к элементам на странице
-        const searchInput = document.getElementById("searchInput");
-        const searchButton = document.getElementById("searchButton");
-
-        // Функция поиска
-        function doSearch() {
-            const query = searchInput.value.trim(); // Убираем пробелы по краям
-
-            if (query === "") {
-                alert("Введите поисковый запрос!");
-                return; // Выходим, если пусто
-            }
-
-            // Формируем адрес Google с нашим запросом + бренд Voul
-            const searchUrl = "https://www.google.com/search?q=" + encodeURIComponent(query + " Voul");
-
-            // Перенаправляем пользователя
-            window.location.href = searchUrl;
-        }
-
-        // Слушаем клик по кнопке
-        searchButton.addEventListener("click", doSearch);
-
-        // Слушаем нажатие Enter в поле ввода
-        searchInput.addEventListener("keydown", function(event) {
-            if (event.key === "Enter") {
-                doSearch();
-            }
-        });
-    </script>
+    <p class="status">Поисковик будущего — в разработке</p>
+    <a href="index.html" class="back-link">← Назад в Voul</a>
 </body>
 </html>
