@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>VouLImess — Общение без границ</title>
+    <title>VoulMes — Музыка в твоём ритме</title>
     <style>
         * {
             margin: 0;
@@ -20,7 +20,7 @@
             justify-content: center;
             min-height: 100vh;
             padding: 16px;
-            gap: 20px;
+            gap: 24px;
         }
         .back-link {
             color: #8b5cf6;
@@ -39,22 +39,33 @@
         .logo {
             font-size: clamp(36px, 8vw, 60px);
             font-weight: bold;
-            text-shadow: 0 0 20px #8b5cf6;
+            text-shadow: 0 0 25px #8b5cf6, 0 0 50px #6d28d9;
             animation: pulse 3s infinite ease-in-out;
+            letter-spacing: 3px;
         }
         .status {
             color: #6b7280;
             font-size: clamp(14px, 3vw, 18px);
+            text-align: center;
+        }
+        .icon {
+            font-size: 50px;
+            animation: float 3s infinite ease-in-out;
         }
         @keyframes pulse {
-            0%, 100% { text-shadow: 0 0 20px #8b5cf6; }
-            50% { text-shadow: 0 0 35px #a78bfa; }
+            0%, 100% { text-shadow: 0 0 25px #8b5cf6, 0 0 50px #6d28d9; }
+            50% { text-shadow: 0 0 40px #a78bfa, 0 0 80px #8b5cf6; }
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
         }
     </style>
 </head>
 <body>
+    <div class="icon">🎵</div>
     <div class="logo">VoulMes</div>
-    <p class="status">VouLImess — Общение без границ</p>
+    <p class="status">Плеер будущего — в разработке</p>
     <a href="index.html" class="back-link">← Назад в Voul</a>
 </body>
 </html>
